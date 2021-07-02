@@ -15,7 +15,7 @@
         app:srcCompat="@drawable/fin" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/finalspace"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Final Space"
@@ -26,5 +26,14 @@
         android:textSize="50sp"
         android:textStyle="bold"
         android:textColor="@color/white"/>
+
+    <Button
+        android:id="@+id/findseasons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Find Seasons"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:color="#252425"/>
 
 </RelativeLayout>
