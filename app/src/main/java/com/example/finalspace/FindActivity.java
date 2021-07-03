@@ -3,6 +3,7 @@ package com.example.finalspace;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.widget.TextView;
 
 public class FindActivity extends AppCompatActivity {
 

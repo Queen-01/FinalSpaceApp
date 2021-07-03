@@ -10,17 +10,18 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private Button mFindSeasonButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mFindSeasonButton = (Button)findViewById(R.id.findseasons);
+        mFindSeasonButton = (Button)findViewById(R.id.findseasonsButton);
 
         mFindSeasonButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(MainActivity.this, "Watch Out!", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainActivity.this, "Watch Out!", Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(MainActivity.this, FindActivity.class);
                 startActivity(intent);
             }

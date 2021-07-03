@@ -6,11 +6,11 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="739dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
+        android:layout_marginBottom="-8dp"
         android:scaleType="centerCrop"
         app:srcCompat="@drawable/fin" />
 
@@ -27,13 +27,25 @@
         android:textStyle="bold"
         android:textColor="@color/white"/>
 
-    <Button
-        android:id="@+id/findseasons"
+
+    <EditText
+        android:id="@+id/editTextTextPersonName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Find Seasons"
+        android:layout_above="@+id/findseasonsButton"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:background="@color/teal_700"
+        android:textColor="@color/white"
+        android:hint="season's premiere" />
+
+    <Button
+        android:id="@+id/findseasonsButton"
+        android:layout_width="245dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:color="#252425"/>
+        android:color="#252425"
+        android:text="Find Seasons" />
 
 </RelativeLayout>
