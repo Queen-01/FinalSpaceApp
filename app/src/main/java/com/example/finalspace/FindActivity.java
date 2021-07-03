@@ -1,6 +1,14 @@
 package com.example.finalspace;
 
-import android.app.AppComponentFactory;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class FindActivity extends AppComponentFactory {
+import android.os.Bundle;
+
+public class FindActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_find);
+    }
 }
