@@ -15,7 +15,7 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class FindActivity extends AppCompatActivity {
+public class FindActivity extends AppCompatActivity implements View.OnClickListener {
     private String[] seasons = new String[]{
             "Season one", "Season two", "Season three"
     };
@@ -28,7 +28,7 @@ public class FindActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find);
         ButterKnife.bind(this);
-
+        mCheckEpisodes.setOnClickListener(this);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -36,13 +36,13 @@ public class FindActivity extends AppCompatActivity {
                 Toast.makeText(FindActivity.this, seasons, Toast.LENGTH_LONG).show();
             }
         });
+    }
 
-        mCheckEpisodes.setOnItemListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(FindActivity.this, EpisodeActivity.class);
-                startActivity(intent);
-            }
-        });
+    @Override
+    public void onClick(View v) {
+        if (v == mCheckEpisodes){
+            Intent intent = new Intent(FindActivity.this, EpisodeActivity.class);
+            startActivity(intent);
+        }
     }
 }
