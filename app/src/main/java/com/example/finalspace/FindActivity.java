@@ -11,17 +11,22 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class FindActivity extends AppCompatActivity {
     private String[] seasons = new String[]{
             "season one", "Season two", "Season three"
     };
-    private ListView mListView;
+//    private ListView mListView;
+    @BindView(R.id.list) ListView mListView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_find);
+        ButterKnife.bind(this);
 
-        mListView = (ListView) findViewById(R.id.list);
+//       mListView = (ListView) findViewById(R.id.list);
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, seasons);
         mListView.setAdapter(adapter);
 
