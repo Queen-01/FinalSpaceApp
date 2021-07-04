@@ -9,6 +9,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Button;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -18,11 +19,10 @@ public class FindActivity extends AppCompatActivity {
     private String[] seasons = new String[]{
             "Season one", "Season two", "Season three"
     };
-//    private String[] episodes = new String[] {
-//            "chapter one", "chapter two", "chapter three", "chapter four", "chapter five",
-//            "chapter six", "chapter seven", "chapter eight", "chapter nine", "chapter ten" };
 
     @BindView(R.id.list) ListView mListView;
+    @BindView(R.id.button2) Button mCheckEpisodes;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +34,14 @@ public class FindActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 String seasons = ((TextView)view).getText().toString();
                 Toast.makeText(FindActivity.this, seasons, Toast.LENGTH_LONG).show();
+            }
+        });
+
+        mCheckEpisodes.setOnItemListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FindActivity.this, EpisodeActivity.class);
+                startActivity(intent);
             }
         });
     }

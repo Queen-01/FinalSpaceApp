@@ -13,9 +13,6 @@ import butterknife.ButterKnife;
 
 
 public class MainActivity extends AppCompatActivity {
-//    public static final String TAG = MainActivity.class.getSimpleName();
-//    private Button mFindSeasonButton;
-
     @BindView(R.id.findseasonsButton) Button mFindSeasonButton;
 
     @Override
@@ -23,9 +20,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-
-//        mFindSeasonButton = (Button)findViewById(R.id.findseasonsButton);
-//        mSeasonEditText = (EditText) findViewById(R.id.seasons);
 
         mFindSeasonButton.setOnClickListener(new View.OnClickListener() {
             @Override
