@@ -19,7 +19,7 @@ public class EpisodeActivity extends AppCompatActivity {
             "Chapter Six", "Chapter Seven", "Chapter  Eight", "Chapter Nine", "Chapter Ten",
     };
     private String[] Scenes = new String[]{
-            "The Toro Regetta", "The Happy Place", "The Grand Surrender", "The Notorious Mrs.Goodspeed",
+            "The Toro Regetta", "The Happy Place", "The Grand Surrender", "The Other Side", "The Notorious Mrs.Goodspeed",
             "Arachnitects", "The First Times They Met", "The Remembered", "The Closer You Get", "The Lost Spy"
     };
     @BindView(R.id.listview) ListView mListView2;
@@ -30,7 +30,7 @@ public class EpisodeActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         FindArrayAdapter adapter = new FindArrayAdapter(this, android.R.layout.simple_list_item_1, Chapters, Scenes);
-
+        mListView2.setAdapter(adapter);
         mListView2.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

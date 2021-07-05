@@ -14,7 +14,7 @@
         <activity android:name=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.finalspace.MainActivity"></meta-data>
+                android:value="com.example.finalspace.FindActivity"></meta-data>
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

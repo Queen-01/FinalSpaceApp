@@ -18,9 +18,9 @@ public class FindArrayAdapter extends ArrayAdapter {
 
     @Override
     public Object getItem(int position){
-        String chapters = mChapters[position];
-        String scenes = mScenes[position];
-        return String.format("%s \nServes great : %s", chapters, scenes);
+        String chapter = mChapters[position];
+        String scene = mScenes[position];
+        return String.format("%s \nServes great : %s", chapter, scene);
     }
     @Override
     public int getCount(){
