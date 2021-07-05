@@ -29,6 +29,9 @@ public class FindActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_find);
         ButterKnife.bind(this);
         mCheckEpisodes.setOnClickListener(this);
+
+        ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, seasons);
+        mListView.setAdapter(adapter);
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

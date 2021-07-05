@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:id="@+id/findActivity"
-    android:layout_height="match_parent"
-    android:background="@color/white">
-
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/textView"
@@ -18,28 +14,20 @@
         android:layout_marginTop="20dp"
         android:layout_centerHorizontal="true"/>
 
-<!--    <ImageButton-->
-<!--        android:id="@+id/imageButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        app:srcCompat="@drawable/images"-->
-<!--        android:layout_alignParentLeft="true"-->
-<!--        android:layout_centerInParent="true"/>-->
-
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/list"
         android:layout_below="@+id/textView"
-    android:layout_alignParentRight="true"
+        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" >
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_height="wrap_content"
-            android:text="Checkout episodes"
-            android:layout_width="245dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"/>
     </ListView>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_height="wrap_content"
+        android:text="Checkout episodes"
+        android:layout_width="245dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 </RelativeLayout>
